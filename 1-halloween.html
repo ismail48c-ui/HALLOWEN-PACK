@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Halloween Night 🎃</title>
+<style>
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 12%,#4b1d78,#150826 60%,#07030f);color:#ffe9c7;font-family:Georgia,serif;text-align:center;overflow-x:hidden}
+.moon{width:140px;height:140px;margin:30px auto 0;border-radius:50%;background:#fff3c4;box-shadow:0 0 80px #ffd75e;animation:glow 4s infinite alternate}
+@keyframes glow{to{box-shadow:0 0 130px #ffb300}}
+h1{font-size:clamp(2.4rem,9vw,5rem);margin:20px 0 0;color:#ff7a00;text-shadow:0 0 20px #ff7a00,4px 4px 0 #000;letter-spacing:3px}
+p{max-width:560px;margin:10px auto;padding:0 16px}
+.bat{position:fixed;font-size:2rem;animation:fly linear infinite;z-index:3}
+@keyframes fly{from{transform:translateX(-10vw)}to{transform:translateX(110vw) translateY(40px)}}
+.row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:30px 16px}
+.c{width:200px;padding:18px;border:2px solid #ff7a00;border-radius:14px;background:#00000066;transition:.3s}
+.c:hover{transform:rotate(-4deg) scale(1.08);background:#ff7a0033}
+.c b{font-size:3rem;display:block}
+button{font:inherit;font-size:1.3rem;padding:14px 34px;background:#ff7a00;color:#1a0a00;border:0;border-radius:40px;cursor:pointer;box-shadow:0 0 24px #ff7a00}
+button:active{transform:scale(.94)}
+#r{font-size:1.5rem;min-height:2.4em;margin-top:18px;color:#7dff7a}
+footer{padding:30px;color:#a88}
+</style></head><body>
+<div class="moon"></div>
+<h1>🎃 HALLOWEEN NIGHT 🎃</h1>
+<p>The moon is out, the bats are flying and the pumpkins are grinning. Enter if you dare…</p>
+<div class="row"><div class="c"><b>👻</b>Haunted House</div><div class="c"><b>🧙</b>Witch’s Brew</div><div class="c"><b>🧟</b>Zombie Parade</div><div class="c"><b>🕸</b>Spider Alley</div></div>
+<button id="b">TRICK OR TREAT?</button><div id="r"></div>
+<footer>Happy Halloween 🦇</footer>
+<script>
+var a=["🦇","🦇","🦇","👻","🕷"];for(var i=0;i<9;i++){var e=document.createElement("div");e.className="bat";e.textContent=a[i%5];e.style.top=Math.random()*70+"vh";e.style.animationDuration=(8+Math.random()*10)+"s";e.style.animationDelay=(-Math.random()*10)+"s";document.body.appendChild(e)}
+var o=["🍬 TREAT! Free candy!","👻 TRICK! Boo! Your socks vanished!","🍫 TREAT! Chocolate!","🕷 TRICK! A spider is on your shoulder!","🍭 TREAT! A giant lollipop!","💀 TRICK! The skeleton wants a dance!"];
+document.getElementById("b").onclick=function(){document.getElementById("r").textContent=o[Math.floor(Math.random()*o.length)]};
+</script></body></html>
